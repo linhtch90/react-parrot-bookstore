@@ -1,13 +1,15 @@
 import React from "react";
 
 import "./SearchBox.css";
+import ProductGrid from "../ProductGrid/ProductGrid.js";
 
 class SearchBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { foodName: "", foodData: "" };
+    this.state = { foodName: "", foodData: null };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.keyPress = this.keyPress.bind(this);
   }
 
   handleChange(event) {
@@ -22,11 +24,31 @@ class SearchBox extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ foodData: data });
-        console.log(this.state.foodData);
+      })
+      .catch((err) => {
+        console.log(`Error: ${err}`);
       });
-    // .catch((err) => {
-    //   console.log(`Error: ${err}`);
-    // });
+  }
+
+  keyPress(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      const fetchURL = `https://forkify-api.herokuapp.com/api/search?q=${this.state.foodName}`;
+      fetch(fetchURL)
+        .then((response) => response.json())
+        .then((data) => {
+          this.setState({ foodData: data });
+        })
+        .catch((err) => {
+          console.log(`Error: ${err}`);
+        });
+    }
+  }
+
+  displayProductGrid() {
+    if (this.state.foodData !== null) {
+      return <ProductGrid productList={this.state.foodData} />;
+    }
   }
 
   render() {
@@ -41,11 +63,13 @@ class SearchBox extends React.Component {
             className="SearchInput"
             placeholder="Search..."
             onChange={this.handleChange}
+            onKeyUp={this.keyPress}
           />
           <button className="SearchButton" onClick={this.handleClick}>
             Search
           </button>
         </div>
+        <div className="GridContainer">{this.displayProductGrid()}</div>
       </div>
     );
   }

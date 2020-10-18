@@ -50,13 +50,19 @@
 
 .SearchButton:active {
     background-color: rgb(229, 115, 115);
-    color: rgb(27, 94, 32);
 }
 
 .SearchButton:hover {
     cursor: pointer;
 }
 
+.GridContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
 
 
 
