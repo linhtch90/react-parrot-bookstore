@@ -23,6 +23,7 @@
     width: 23%;
     height: 27rem;
     margin: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .GridItem:hover {
@@ -43,6 +44,7 @@
 }
 
 .DetailButton {
+    text-decoration: none;
     outline: none;
     border: solid;
     border-color: rgb(183, 28, 28);
@@ -51,7 +53,7 @@
     color: rgb(183, 28, 28);
     padding: 0.5rem;
     margin-left: 0.5rem;
-    width: 7rem;
+    width: 13rem;
     font-size: 1rem;
     font-weight: 600;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 import "./ProductGrid.css";
 
@@ -37,7 +38,7 @@ class ProductGrid extends React.Component {
                   alt={item.recipe_id}
                 />
                 <div className="ItemTitle">{item.title}</div>
-                <button className="DetailButton">Details</button>
+                <Link style={{textDecoration: "none", color: "rgb(183, 28, 28)"}} to={item.recipe_id}><button className="DetailButton">Ingredients Details</button></Link>
               </div>
             );
           })}
