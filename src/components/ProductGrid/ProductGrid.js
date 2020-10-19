@@ -38,7 +38,7 @@ class ProductGrid extends React.Component {
                   alt={item.recipe_id}
                 />
                 <div className="ItemTitle">{item.title}</div>
-                <Link style={{textDecoration: "none", color: "rgb(183, 28, 28)"}} to={item.recipe_id}><button className="DetailButton">Ingredients Details</button></Link>
+                <Link style={{textDecoration: "none", color: "rgb(183, 28, 28)"}} to={`${item.recipe_id}`}><button className="DetailButton">Ingredients Details</button></Link>
               </div>
             );
           })}
