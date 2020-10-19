@@ -46,7 +46,7 @@ class SearchBox extends React.Component {
   }
 
   displayProductGrid() {
-    if (this.state.foodData !== null) {
+    if (this.state.foodData !== null && this.state.foodName !== "") {
       return <ProductGrid productList={this.state.foodData} />;
     }
   }
