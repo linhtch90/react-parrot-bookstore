@@ -11,7 +11,7 @@ class Routing extends React.Component {
           <Route exact path="/">
             <Homepage />
           </Route>
-          <Route path="/:id" component={ProductDetail} />
+          <Route path="/:productID" component={ProductDetail} />
         </Switch>
       </Router>
     );

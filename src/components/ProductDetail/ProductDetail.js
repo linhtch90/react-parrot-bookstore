@@ -1,11 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
+import "./ProductDetail.css";
+
 class ProductDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productID: this.props.match.params.id,
+      productID: this.props.match.params.productID,
       productData: null,
       image_url: null,
       publisher: null,
@@ -35,7 +37,15 @@ class ProductDetail extends React.Component {
   }
 
   render() {
-    return <div></div>;
+      return (
+          <div className="DetailContainer">
+            <img className="DetailImage" src={this.state.image_url} alt={this.state.title} />
+            <div className="DetailTitle">{this.state.title}</div>
+            <div className="DetailSubtitle">Ingredients:</div>
+            <div className="DetailIngredients"><i>{this.state.ingredients}</i></div>
+            <div><a href={this.state.source_url} target="_blank">Source</a></div>
+          </div>
+      );
   }
 }
 
