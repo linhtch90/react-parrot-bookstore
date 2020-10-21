@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-parrot-restaurant/static/css/main.e5e7c6b1.chunk.css",
+    "main.js": "/react-parrot-restaurant/static/js/main.dfe0b8a0.chunk.js",
+    "main.js.map": "/react-parrot-restaurant/static/js/main.dfe0b8a0.chunk.js.map",
+    "runtime-main.js": "/react-parrot-restaurant/static/js/runtime-main.e3017073.js",
+    "runtime-main.js.map": "/react-parrot-restaurant/static/js/runtime-main.e3017073.js.map",
+    "static/js/2.89d14bcb.chunk.js": "/react-parrot-restaurant/static/js/2.89d14bcb.chunk.js",
+    "static/js/2.89d14bcb.chunk.js.map": "/react-parrot-restaurant/static/js/2.89d14bcb.chunk.js.map",
+    "index.html": "/react-parrot-restaurant/index.html",
+    "precache-manifest.edd6048d4a6415ab4e54993d1535e392.js": "/react-parrot-restaurant/precache-manifest.edd6048d4a6415ab4e54993d1535e392.js",
+    "service-worker.js": "/react-parrot-restaurant/service-worker.js",
+    "static/css/main.e5e7c6b1.chunk.css.map": "/react-parrot-restaurant/static/css/main.e5e7c6b1.chunk.css.map",
+    "static/js/2.89d14bcb.chunk.js.LICENSE.txt": "/react-parrot-restaurant/static/js/2.89d14bcb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3017073.js",
+    "static/js/2.89d14bcb.chunk.js",
+    "static/css/main.e5e7c6b1.chunk.css",
+    "static/js/main.dfe0b8a0.chunk.js"
+  ]
+}
